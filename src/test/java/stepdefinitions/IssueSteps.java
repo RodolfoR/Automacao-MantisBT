@@ -7,22 +7,21 @@ import cucumber.api.java.pt.Quando;
 import pageobjects.IssuePage;
 import pageobjects.LoginPage;
 
-public class IssueSteps{
-	
+public class IssueSteps {
+
 	WebDriver driver;
-	
+
 	@Quando("^um usuario logar no sistema \"([^\"]*)\", \"([^\"]*)\"$")
 	public void um_usuario_logar_no_sistema(String arg1, String arg2) throws Throwable {
 		Hooks.abrirUrl("https://mantis-prova.base2.com.br/login_page.php");
 		driver = Hooks.getDriver();
-		
+
 		LoginPage lp = new LoginPage(driver);
 		lp.preencherUserName(arg1);
 		lp.preencherSenha(arg2);
 		lp.clicarBtnLogin();
 	}
-	
-	
+
 	@Quando("^clicar no link report issue$")
 	public void clicar_no_link_report_issue() throws Throwable {
 		IssuePage ip = new IssuePage(driver);
@@ -34,7 +33,7 @@ public class IssueSteps{
 		IssuePage ip = new IssuePage(driver);
 		String usuarioFormatado = ip.dadosUsuario();
 		ip.selecionaProjeto(usuarioFormatado);
-		
+
 	}
 
 	@Quando("^clicar no botao select project$")
@@ -72,11 +71,5 @@ public class IssueSteps{
 		IssuePage ip = new IssuePage(driver);
 		ip.validarReportIssue();
 	}
-	
+
 }
-
-// /html/body/div[2]/table/tbody/tr[3]/td/p
-
-//body > div:nth-child(5) > table > tbody > tr:nth-child(3) > td > p
-
-//Please use the "Back" button in your web browser to return to the previous page. There you can correct whatever problems were identified in this error or select another action. You can also click an option from the menu bar to go directly to a new section.
