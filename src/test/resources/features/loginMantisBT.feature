@@ -9,7 +9,7 @@ Funcionalidade: Login
   Contexto: Deve realizar login com sucesso
     Dado que o usuario esta na pagina de login do mantisBT
 
-  @RealizarLoginMantisBT @End2End
+  @RealizarLoginMantisBT 
   Esquema do Cenario: Realizar Login
     Quando informo o usuario "<login>"
     E informo a senha "<senha>"

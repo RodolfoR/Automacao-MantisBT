@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "classpath:Features",
 		glue = {"stepdefinitions"},
-		tags = {"@RealizarLoginMantisBT"},
+		tags = {"@RegistrarIssue"},
 		monochrome = true
 		)
 public class TesteRunners {

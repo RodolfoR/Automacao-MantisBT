@@ -52,7 +52,7 @@ public class LoginPage {
 
 	public void validarLogin() {
 		util.esperarElemento(usuarioLogado);
-		System.out.println("Usuario Logado: " + usuarioLogado.getText());
+		Assert.assertEquals("rodolfo.rocha", usuarioLogado.getText());
 	}
 
 	public void validarLoginInvalido() {
